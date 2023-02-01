@@ -227,7 +227,7 @@ a {
     background: rgb(175, 173, 173);
 }
 
-@media (max-width: 960px){
+@media (max-width: 768px){
     .container {
         width: 90%;
         grid-template-columns: repeat(1, 1fr);
@@ -237,12 +237,16 @@ a {
 
     .marks{
         position: relative;
-        width: 135px;
+        width: 120px;
         height: 135px;
         transform-style: preserve-3d;
         animation: rotate 30s linear infinite;
     }
     
+    .container .card .face {
+        width: 260px;
+    }
+
     @keyframes rotate{
         from{
             transform: perspective(900px) rotateY(0deg);
@@ -258,6 +262,6 @@ a {
         height: 100%;
         transform-origin: center;
         transform-style: preserve-3d;
-        transform: rotateY(calc(var(--i) * 45deg)) translateZ(170px);
+        transform: rotateY(calc(var(--i) * 45deg)) translateZ(150px);
     }
 }
