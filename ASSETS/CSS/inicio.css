@@ -177,9 +177,8 @@ body {
     transform: translateY(0);
 }
 
-.container .card .face.face2 .contenido p,
-a {
-    font-size: 10pt;
+.container .card .face.face2 .contenido p{
+    font-size: 10px;
     margin: 0;
     padding: 0;
     color: #333;

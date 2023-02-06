@@ -168,13 +168,19 @@ header .nav ul .items {
     column-gap: 20px;
 }
 
+.footer-content .networks ul li a{
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
 .footer-content .networks ul li i {
     font-size: 2em;
 }
 
 .footer .licence {
     background: #ffffff;
-    padding: 0 10px;
     text-align: center;
     color: #444;
 }
