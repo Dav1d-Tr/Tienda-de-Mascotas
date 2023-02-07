@@ -36,6 +36,7 @@
     background-color: #ECF0F1;
     border-radius: 10px;
     transition: all .2s;
+    padding: 3px;
 }
 
 .content2:hover {
