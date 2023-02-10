@@ -1,0 +1,475 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #333;
+    overflow-x: hidden;
+}
+
+.banner {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.banner-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.banner-video video {
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.banner-overlay {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #303952;
+    z-index: 1;
+    opacity: .70;
+}
+
+.banner-content {
+    z-index: 2;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 50px;
+}
+
+.image-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-content .image-logo img {
+    width: 100%;
+}
+
+.formulario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.mensaje {
+    width: 400px;
+    background: #28292d;
+    color: aqua;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    padding: 1rem;
+    line-height: 1.2;
+}
+
+.box {
+    position: relative;
+    height: 430px;
+    width: 400px;
+    background: #28292d;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.box::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 400px;
+    height: 420px;
+    background: linear-gradient(0deg, transparent, aqua, aqua);
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+}
+
+.box::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 400px;
+    height: 420px;
+    background: linear-gradient(0deg, transparent, aqua, aqua);
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -3s;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.card {
+    position: absolute;
+    inset: 2px;
+    border-radius: 10px;
+    background: #28292d;
+    z-index: 10;
+    width: 98%;
+    height: 98%;
+    padding: 2rem;
+}
+
+/*Form*/
+
+.input-form {
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.input {
+    border: solid 2px #00ffff;
+    border-radius: 10px;
+    background: #333;
+    padding: 1rem;
+    font-size: 1rem;
+    color: #000000;
+    transition: border 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    margin-bottom: 30px;
+}
+
+.textUser {
+    position: absolute;
+    left: 60px;
+    color: #666666;
+    pointer-events: none;
+    transform: translateY(1rem);
+    transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input:focus,
+input:valid {
+    color: rgb(0, 255, 255);
+    background-color: #212121;
+    outline-color: rgb(0, 255, 255);
+    box-shadow: -3px -3px 15px rgb(0, 255, 255);
+    transition: .1s;
+    transition-property: box-shadow;
+}
+
+.input:focus~label,
+input:valid~label {
+    transform: translateY(-95%);
+    color: aqua;
+}
+
+.input:hover {
+    border: solid 1.9px #000000;
+    transform: scale(1.03);
+    box-shadow: 1px 1px 5px #ffffff85;
+    transition: border-color 1s ease-in-out;
+}
+
+/* Fin Form */
+
+.enviar {
+    display: flex;
+    justify-content: center;
+}
+
+.button-submit {
+    font-size: 18px;
+    background: #3bcfcf;
+    color: white;
+    padding: 0.5em 0.8em 0.7em;
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.2s;
+}
+
+.button-submit span {
+    display: block;
+    margin-left: 0.3em;
+    transition: all 0.3s ease-in-out;
+}
+
+.button-submit i {
+    display: block;
+    transform-origin: center center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.button-submit:hover .svg-wrapper {
+    animation: fly-1 0.6s ease-in-out infinite alternate;
+}
+
+.button-submit:hover i {
+    transform: translateX(1.2em) rotate(45deg) scale(1.1);
+}
+
+.button-submit:hover span {
+    transform: translateX(5em);
+}
+
+.button-submit:active {
+    transform: scale(0.95);
+}
+
+@keyframes fly-1 {
+    from {
+        transform: translateY(0.1em);
+    }
+
+    to {
+        transform: translateY(-0.1em);
+    }
+}
+
+.ventana {
+    width: 50%;
+    background: #e6dfdf;
+    padding: 1em;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-radius: 15px;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    z-index: 100000;
+    align-items: center;
+    text-align: center;
+    display: none;
+}
+
+.ventana .imgage-ventana {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ventana .imgage-ventana img {
+    width: 100%;
+}
+
+.text-ventana h2 {
+    color: #08a8cc;
+    font-size: 2rem;
+    font-family: 'Kavoon', cursive;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.text-ventana p {
+    color: #333;
+    font-size: 1rem;
+    text-align: center;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.cssbuttons-io {
+    position: relative;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: 0.05em;
+    border-radius: 0.8em;
+    border: none;
+    background: #08a8cc;
+    color: ghostwhite;
+    overflow: hidden;
+    font-family: 'Kavoon', cursive;
+}
+
+.cssbuttons-io i {
+    width: 100%;
+    height: 100%;
+    margin-right: 0.5em;
+}
+
+.cssbuttons-io span {
+    position: relative;
+    z-index: 10;
+    transition: color 0.4s;
+    display: inline-flex;
+    align-items: center;
+    padding: 0.8em 1.2em 0.8em 1.05em;
+}
+
+.cssbuttons-io::before,
+.cssbuttons-io::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.cssbuttons-io::before {
+    content: "";
+    background: #000;
+    width: 120%;
+    left: -10%;
+    transform: skew(30deg);
+    transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+}
+
+.cssbuttons-io:hover::before {
+    transform: translate3d(100%, 0, 0);
+}
+
+.cssbuttons-io:active {
+    transform: scale(0.95);
+}
+
+
+@media screen and (max-width: 768px) {
+    .banner-content {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .banner-content .image-logo img {
+        position: relative;
+        top: 25px;
+        padding: 1rem;
+        width: 50%;
+        margin-bottom: 10px;
+    }
+
+    .formulario {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .mensaje {
+        width: 250px;
+        background: #28292d;
+        color: aqua;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        padding: 1rem;
+        font-size: 0.7rem;
+    }
+
+    .box {
+        position: relative;
+        height: 300px;
+        width: 250px;
+        background: #28292d;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .box::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 250px;
+        height: 250px;
+        background: linear-gradient(0deg, transparent, aqua, aqua);
+        transform-origin: bottom right;
+        animation: animate 6s linear infinite;
+    }
+
+    .box::after {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 250px;
+        height: 250px;
+        background: linear-gradient(0deg, transparent, aqua, aqua);
+        transform-origin: bottom right;
+        animation: animate 6s linear infinite;
+        animation-delay: -3s;
+    }
+
+    .card {
+        position: absolute;
+        inset: 2px;
+        border-radius: 10px;
+        background: #28292d;
+        z-index: 10;
+        width: 98%;
+        height: 98%;
+        padding: 2rem;
+    }
+
+    /*Form*/
+
+    .input-form {
+        position: relative;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .input {
+        border: solid 2px #00ffff;
+        border-radius: 10px;
+        background: #333;
+        padding: 0.7rem;
+        font-size: 0.8rem;
+        color: #000000;
+        transition: border 150ms cubic-bezier(0.4, 0, 0.2, 1);
+        margin-bottom: 20px;
+        width: 100%;
+        height: 30px;
+        align-items: center;
+    }
+
+    .textUser {
+        left: 15px;
+        bottom: 40px;
+        font-size: 0.8rem;
+    }
+
+    .input:focus,
+    input:valid {
+        color: rgb(0, 255, 255);
+        background-color: #212121;
+        outline-color: rgb(0, 255, 255);
+        box-shadow: -3px -3px 15px rgb(0, 255, 255);
+        transition: .1s;
+        transition-property: box-shadow;
+    }
+
+    .input:focus~label,
+    input:valid~label {
+        display: none;
+    }
+
+    /* Fin Form */
+
+    .ventana {
+        width: 80%;
+        top: 15%;
+        left: 10%;
+    }
+}

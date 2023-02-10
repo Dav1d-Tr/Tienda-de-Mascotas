@@ -315,7 +315,7 @@ header .nav ul .items {
     position: fixed;
     -webkit-transition: all 1s ease;
     -o-transition: all 1s ease;
-    transition: all 5s ease;
+    transition: all 3s ease;
     z-index: 10000;
     display: flex;
     justify-content: center;
