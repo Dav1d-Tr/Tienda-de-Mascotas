@@ -469,7 +469,17 @@ input:valid~label {
 
     .ventana {
         width: 80%;
-        top: 15%;
+        grid-template-columns: repeat(1, 1fr);
+        top: 13%;
         left: 10%;
     }
+
+    .ventana .imgage-ventana img {
+        width: 80%;
+    }
+
+    .text-ventana p {
+        line-height: 1;
+    }
+    
 }

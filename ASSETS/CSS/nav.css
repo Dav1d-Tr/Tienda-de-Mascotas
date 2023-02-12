@@ -164,21 +164,59 @@ header .nav ul .items {
     color: #444;
 }
 
-.footer-content .networks ul {
-    display: flex;
+.social-icons {
     list-style: none;
-    column-gap: 20px;
-}
-
-.footer-content .networks ul li a{
-    font-size: 15px;
+    display: flex;
     margin: 0;
-    padding: 0;
-    color: #333;
 }
 
-.footer-content .networks ul li i {
-    font-size: 2em;
+.social-icons li {
+    display: inline-block;
+    padding: 0;
+    margin-right: 5px;
+}
+
+.social-icons li:last-child {
+    margin-right: 0;
+}
+
+.social-icons li a {
+    font-size: 20px;
+    display: block;
+    text-align: center;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    background: #444;
+    color: #ddd;
+    transition: 0.3s;
+}
+
+.social-icons li a i {
+    line-height: 40px !important;
+}
+
+.social-icons{
+    width: 40px;
+}
+
+.social-icons li {
+    margin-bottom: 5px;
+}
+
+.social-icons li:last-child {
+    margin-right: 0;
+}
+
+.social-icons li a {
+    background: #444;
+    color: #ddd;
+}
+
+.social-icons li a:hover {
+    background: var(--clr);
+    color: #fff;
 }
 
 .footer .licence {
@@ -315,7 +353,7 @@ header .nav ul .items {
     position: fixed;
     -webkit-transition: all 1s ease;
     -o-transition: all 1s ease;
-    transition: all 3s ease;
+    transition: 3s;
     z-index: 10000;
     display: flex;
     justify-content: center;

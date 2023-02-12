@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="icon" href="../IMG/1-PhotoRoom.png-PhotoRoom.png" type="image/png">
-    <link rel="stylesheet" href="../CSS/inicio.css">
+    <link rel="stylesheet" href="../CSS/Trabajo.css">
     <link rel="stylesheet" href="../CSS/nav.css">
     <title>Huellas De Corazón || INICIO</title>
 </head>
@@ -26,7 +26,7 @@
         <nav class="nav">
             <ul>
                 <li>
-                    <a href="Inicio.HTML" class="link active">Inicio</a>
+                    <a href="Inicio.HTML" class="link">Inicio</a>
                 </li>
                 <li>
                     <a href="Servicios.HTML" class="link">Servicios</a>
@@ -38,7 +38,7 @@
                     <a href="Contacto.HTML" class="link">Contactanos</a>
                 </li>
                 <li class="items">
-                    <a href="Trabajo.HTML" class="link">Trabajo</a>
+                    <a href="Trabajo.HTML" class="link active">Trabajo</a>
                 </li>
                 <li>
                     <a href="Contacto.HTML">
@@ -67,8 +67,55 @@
         </div>
         <div class="banner-overlay"></div>
         <div class="banner-content">
-            
+            <div class="content-form">
+                <form action="#" class="form">
+                    <div class="input-group">
+                        <label class="label">Enter your Name..</label>
+                        <input autocomplete="off" name="Email" id="Email" class="input" type="text">
+                    </div>
+                    <div class="input-group">
+                        <label class="label">Email Address..</label>
+                        <input autocomplete="off" name="Email" id="Email" class="input" type="email">
+                    </div>
+                    <div class="input-group">
+                        <label class="label">Enter your Phone..</label>
+                        <input autocomplete="off" name="Email" id="Email" class="input" type="tel">
+                    </div>
+                    <div class="input-group">
+                        <label class="label">Enter your address..</label>
+                        <input autocomplete="off" name="Email" id="Email" class="input" type="email">
+                    </div>
+                    <div class="group">
+                        <label class="check">
+                            <input type="radio" class="option-input radio" name="example" checked />
+                            Hombre
+                        </label>
+                        <label>
+                            <input type="radio" class="option-input radio" name="example" checked />
+                            Mujer
+                        </label>
+                    </div>
+                    <div class="group">
+                        <label>
+                            <input type="checkbox" class="option-input checkbox" checked />
+                            <a href="#" class="terminos">Terminos y Condiciones</a>
+                        </label>
+                    </div>
+                    <div class="enviar">
+                        <button type="submit" class="submit">
+                            <div class="svg-wrapper-1">
+                                <div class="svg-wrapper">
+                                    <i class='bx bx-rocket'></i>
+                                </div>
+                            </div>
+                            <span>Send</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
         </div>
     </section>
+    <script src="../JS/app.js"></script>
 </body>
+
 </html>
