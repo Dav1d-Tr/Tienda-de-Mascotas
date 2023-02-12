@@ -331,9 +331,45 @@ header .nav ul .items {
         text-align: center;
     }
 
-    .footer-content .networks ul {
+    .social-icons {
+        width: 100%;
         display: flex;
         justify-content: center;
+        display: flex;
+        list-style: none;
+        margin: 0 auto;
+    }
+    
+    .social-icons li {
+        display: flex;
+        padding: 0;
+        margin-right: 5px;
+        margin-bottom: 0;
+    }
+    
+    .social-icons li:last-child {
+        margin-right: 0;
+    }
+    
+    .social-icons li a {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        text-decoration: none;
+    }
+    
+    .social-icons li a i {
+        line-height: 40px !important;
+    }
+    
+    .social-icons li a {
+        background: #444;
+        color: #ddd;
+    }
+    
+    .social-icons li a:hover {
+        background: var(--clr);
+        color: #fff;
     }
 }
 
